@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'Hello/styles.css' %}">
+</head>
+<body>
+    <div class="pie">
+        <img id="pieGraph" src="{% static 'Hello/download.png' %}" alt="Click me" />
+
+        <script>
+            // Get a reference to the image element by its ID
+            var image = document.getElementById("pieGraph");
+
+            // Add a click event listener to the image
+            image.addEventListener("click", function() {
+                // Redirect to a URL that will display the pie chart (change this URL to your actual view URL)
+                window.location.href = "{% url 'pie_chart' %}";
+            });
+        </script>            
+    </div>
+
+    <div class="line">
+        <img id="lineGraph" src="{% static 'Hello/line-graph.jpg' %}" alt="Click me" />
+
+        <script>
+            // Get a reference to the image element by its ID
+            var image = document.getElementById("lineGraph");
+
+            // Add a click event listener to the image
+            image.addEventListener("click", function() {
+                // Redirect to a URL that will display the line graph (change this URL to your actual view URL)
+                window.location.href = "{% url 'result' %}";
+            });
+        </script>
+    </div>
+    <div class="Bar">
+        <img id="barGraph" width="460" height="460" src="{% static 'Hello/png-clipart-bar-chart-data-collection-pie-graph-angle-furniture.png' %}"  width="460" height="345" alt="Click me" />
+
+        <script>
+            // Get a reference to the image element by its ID
+            var image = document.getElementById("barGraph");
+
+            // Add a click event listener to the image
+            image.addEventListener("click", function() {
+                // Redirect to a URL that will display the bar chart (change this URL to your actual view URL)
+                window.location.href = "{% url 'result' %}";
+            });
+        </script>
+    </div>
+    <div class="Venn">
+        <img id="vennDiagram" src="{% static 'Hello/6287526.png' %}" width="460" height="460" alt="Click me" />
+
+        <script>
+            // Get a reference to the image element by its ID
+            var image = document.getElementById("vennDiagram");
+
+            // Add a click event listener to the image
+            image.addEventListener("click", function() {
+                // Redirect to a URL that will display the Venn diagram (change this URL to your actual view URL)
+                window.location.href = "{% url 'result' %}";
+            });
+        </script>
+    </div>
+</body>
+</html>

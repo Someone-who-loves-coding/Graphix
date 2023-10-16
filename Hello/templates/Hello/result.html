@@ -1,0 +1,60 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Include your custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+    <!-- Include Bootstrap CSS (if not already included) -->
+    <link rel="stylesheet" href="{% static 'style.css' %}" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Result Page</title>
+</head>
+<body>
+    <!-- Your custom content with clickable images -->
+    <div class="graph">
+        <img id="barGraph" src="{% static 'png-clipart-bar-chart-data-collection-pie-graph-angle-furniture.png' %}" width="460" height="460" alt="Bar Graph" onclick="showGraph('barGraphImage')">
+    </div>
+    <div class="graph">
+        <img id="lineGraph" src="{% static 'line-graph.jpg' %}" alt="Line Graph" onclick="showGraph('lineGraphImage')">
+    </div>
+    <div class="graph">
+        <img id="pieGraph" src="{% static 'download.png' %}" width="460" height="460" alt="Pie Chart" onclick="showGraph('pieGraphImage')">
+    </div>
+    <div class="graph">
+        <img id="vennDiagram" src="{% static '6287526.png' %}" width="460" height="460" alt="Venn Diagram" onclick="showGraph('vennDiagramImage')">
+    </div>
+    
+    <!-- Define graph display areas -->
+    <div class="graph-display" id="barGraphImage" style="display: none;">
+        <!-- Insert the bar graph here when it's generated -->
+    </div>
+    <div class="graph-display" id="lineGraphImage" style="display: none;">
+        <!-- Insert the line graph here when it's generated -->
+    </div>
+    <div class="graph-display" id="pieGraphImage" style="display: none;">
+        <!-- Insert the pie chart here when it's generated -->
+    </div>
+    <div class="graph-display" id="vennDiagramImage" style="display: none;">
+        <!-- Insert the Venn diagram here when it's generated -->
+    </div>
+
+    <script>
+        // Function to show a specific graph by ID
+        function showGraph(graphId) {
+            // Hide all graph display areas
+            var graphDisplays = document.querySelectorAll('.graph-display');
+            graphDisplays.forEach(function (element) {
+                element.style.display = 'none';
+            });
+            
+            // Show the selected graph display area
+            var selectedGraphDisplay = document.getElementById(graphId);
+            selectedGraphDisplay.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'Hello/styles.css' %}">
+</head>
+<body>
+    <!-- Display the pie chart here -->
+    <div class="pie-chart">
+        <img src="data:image/png;base64,{{ charts.0.data }}" alt="Pie Chart">
+    </div>
+</body>
+</html>

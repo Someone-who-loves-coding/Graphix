@@ -1,0 +1,80 @@
+{% load static %}
+<html>
+
+
+<head>
+  <title>Graphixo</title>
+  <link rel="icon" type="image/x-icon" href="favicon (1).png">
+  <link rel="stylesheet" type="text/css" href="{% static 'Hello/styles.css' %}">
+</head>
+
+<body>
+  <div id="tbldiv">
+    <div class="dropdown">
+      <button class="tablink">Features</button>
+      <div class="dropdown-content">
+        <a href="#">PIE CHART</a>
+        <a href="#">LINE GRAPH</a>
+        <a href="#">BAR GRAPH</a>
+      </div>
+    </div>
+    <button class="tablink" onclick="scrollingfact();">About tool</button>
+    <button class="tablink" onclick="scrollingaq();">About us</button>
+  </div>
+  <div><p>
+    <img class="padded" src="logo.png" width="600" height="305">
+    <label for="images" class="drop-container" id="dropcontainer">
+      <span class="drop-title">Drop files here</span>
+      or
+      <input type="file" id="images" accept=".xls/.xlsx,.pdf,.png" required>
+    </label></p>
+  </div>
+  <div>
+    <a href="{% url 'upload' %}">
+        <button class="button-56" role="button">Upload</button>
+    </a>
+</div>
+  </div>
+  <br><br><br><br><br>
+ 
+  <div>
+   
+    <h1 >About tool</h1>
+    
+    <p>Data visualization is the representation of data through use of common graphics, such as charts, plots, infographics, and even animations. These visual displays of information communicate complex data relationships and data-driven insights in a way that is easy to understand.
+    Data visualization tools are software applications that render information in a visual format such as a graph, chart, or heat map for data analysis purposes. Such tools make it easier to understand and work with massive amounts of data. With effective data visualization tools, people can make data-driven decisions without having to spend valuable time trying to wrangle raw data into an interpretable format. Properly configured, data visualization software does that work for you, sifting through vast stores of information to present only the most meaningful, relevant data.
+    </p>
+  </div>
+  <div>
+   
+    <h1 >About Us</h1>
+    
+    <p>Data visualization is the representation of data through use of common graphics, such as charts, plots, infographics, and even animations. These visual displays of information communicate complex data relationships and data-driven insights in a way that is easy to understand.
+    Data visualization tools are software applications that render information in a visual format such as a graph, chart, or heat map for data analysis purposes. Such tools make it easier to understand and work with massive amounts of data. With effective data visualization tools, people can make data-driven decisions without having to spend valuable time trying to wrangle raw data into an interpretable format. Properly configured, data visualization software does that work for you, sifting through vast stores of information to present only the most meaningful, relevant data.
+    </p>
+  </div>                                                                           
+     
+</body>
+
+</html>
+<script type="text/javascript">
+  function scrollingtool(){
+      window.scrollTo({
+top: 830,
+behavior: 'smooth',
+});
+}
+function scrollingfact(){
+      window.scrollTo({
+top: 1835,
+behavior: 'smooth',
+});
+}
+  function scrollingmap(){
+      window.scrollTo({
+top: 2595,
+behavior: 'smooth',
+});
+ 
+  }
+</script>
